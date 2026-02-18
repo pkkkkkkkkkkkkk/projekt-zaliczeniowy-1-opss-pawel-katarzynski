@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProZal — Tworzymy przyszłość cyfrową</title>
+    <meta name="description" content="ProZal — tworzymy nowoczesne strony internetowe, aplikacje mobilne i systemy backendowe dla firm i startupów.">
+    <meta property="og:title" content="ProZal — Tworzymy przyszłość cyfrową">
+    <meta property="og:description" content="Młody zespół programistów tworzący strony, aplikacje i systemy na zamówienie.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#home">
+                    <i class="bi bi-braces"></i> ProZal
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Start</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">O nas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Usługi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#technologies">Technologie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section d-flex align-items-center">
+            <div id="heroBg3d"></div>
+            <canvas id="particleCanvas"></canvas>
+            <div class="hero-bg"></div>
+            <div class="container position-relative">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1 class="hero-title">
+                            Tworzymy <span class="text-accent">przyszłość</span> cyfrową
+                        </h1>
+                        <p class="hero-subtitle lead">
+                            Jesteśmy młodym zespołem programistów, który zamienia pomysły w nowoczesne rozwiązania.
+                            Projektujemy strony, aplikacje i systemy z pasją do kodu.
+                        </p>
+                        <div class="hero-buttons mt-4">
+                            <a href="#portfolio" class="btn btn-accent btn-lg me-3">
+                                <i class="bi bi-collection"></i> Zobacz projekty
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-envelope"></i> Napisz do nas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O nas -->
+        <section id="about" class="section-padding section-shell">
+            <div class="container">
+                <div class="text-center mb-5 reveal" data-reveal>
+                    <p class="section-kicker">Zespół</p>
+                    <h2 class="section-title">O nas</h2>
+                    <p class="section-subtitle">Poznaj nasz zespół — łączy nas pasja do technologii</p>
+                </div>
+                <div class="row g-4 section-grid" data-stagger>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <article class="card team-card h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <img src="assets/images/team-1.jpg" class="card-img-top" alt="Zdjęcie Jakuba Kowalskiego" loading="lazy">
+                            <div class="card-body text-center">
+                                <h3 class="card-title h5">Jakub Kowalski</h3>
+                                <p class="card-role">Full-Stack Developer</p>
+                                <p class="card-text">Specjalizuje się w React i Node.js. Fan czystego kodu i dobrych praktyk. W wolnym czasie tworzy gry indie.</p>
+                                <div class="team-socials">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Jakuba"><i class="bi bi-github"></i></a>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Jakuba"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <article class="card team-card h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <img src="assets/images/team-2.jpg" class="card-img-top" alt="Zdjęcie Anny Nowak" loading="lazy">
+                            <div class="card-body text-center">
+                                <h3 class="card-title h5">Anna Nowak</h3>
+                                <p class="card-role">UI/UX Designer</p>
+                                <p class="card-text">Projektuje intuicyjne interfejsy i dba o każdy piksel. Uwielbia minimalizm i typografię.</p>
+                                <div class="team-socials">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Anny"><i class="bi bi-github"></i></a>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Anny"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <article class="card team-card h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <img src="assets/images/team-3.jpg" class="card-img-top" alt="Zdjęcie Mateusza Wiśniewskiego" loading="lazy">
+                            <div class="card-body text-center">
+                                <h3 class="card-title h5">Mateusz Wiśniewski</h3>
+                                <p class="card-role">Backend Developer</p>
+                                <p class="card-text">Mistrz baz danych i API. Pisze w Pythonie i Go. Zawsze optymalizuje wydajność na maksa.</p>
+                                <div class="team-socials">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Mateusza"><i class="bi bi-github"></i></a>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Mateusza"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <article class="card team-card h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <img src="assets/images/team-4.jpg" class="card-img-top" alt="Zdjęcie Oli Kamińskiej" loading="lazy">
+                            <div class="card-body text-center">
+                                <h3 class="card-title h5">Ola Kamińska</h3>
+                                <p class="card-role">Mobile Developer</p>
+                                <p class="card-text">Tworzy aplikacje mobilne w React Native i Flutter. Entuzjastka open source i hackathonów.</p>
+                                <div class="team-socials">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Oli"><i class="bi bi-github"></i></a>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Oli"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="section-padding section-alt section-shell">
+            <div class="container">
+                <div class="text-center mb-5 reveal" data-reveal>
+                    <p class="section-kicker">Case studies</p>
+                    <h2 class="section-title">Portfolio</h2>
+                    <p class="section-subtitle">Wybrane projekty, z których jesteśmy dumni</p>
+                </div>
+                <div class="row g-4 section-grid" data-stagger>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card project-card project-shopflow h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <picture>
+                                <source srcset="img/shopflow.webp" type="image/webp">
+                                <img src="img/shopflow.png" class="card-img-top" alt="Zrzut ekranu sklepu ShopFlow" loading="lazy">
+                            </picture>
+                            <div class="card-body">
+                                <h3 class="card-title h5">ShopFlow</h3>
+                                <p class="card-text">Nowoczesny sklep internetowy z panelem admina, koszykiem i płatnościami online.</p>
+                                <div class="project-tags">
+                                    <span class="badge">React</span>
+                                    <span class="badge">Node.js</span>
+                                    <span class="badge">MongoDB</span>
+                                </div>
+                                <div class="project-cta">
+                                    <a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Zobacz projekt ShopFlow">Zobacz projekt <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card project-card project-fittracker h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <picture>
+                                <source srcset="img/fittracker.webp" type="image/webp">
+                                <img src="img/fittracker.png" class="card-img-top" alt="Zrzut ekranu aplikacji FitTracker" loading="lazy">
+                            </picture>
+                            <div class="card-body">
+                                <h3 class="card-title h5">FitTracker</h3>
+                                <p class="card-text">Aplikacja mobilna do śledzenia treningów i postępów z wykresami i powiadomieniami.</p>
+                                <div class="project-tags">
+                                    <span class="badge">React Native</span>
+                                    <span class="badge">Firebase</span>
+                                </div>
+                                <div class="project-cta">
+                                    <a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Zobacz projekt FitTracker">Zobacz projekt <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card project-card project-weather h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <picture>
+                                <source srcset="img/weather.webp" type="image/webp">
+                                <img src="img/weather.png" class="card-img-top" alt="Zrzut ekranu aplikacji WeatherNow" loading="lazy">
+                            </picture>
+                            <div class="card-body">
+                                <h3 class="card-title h5">WeatherNow</h3>
+                                <p class="card-text">Elegancka aplikacja pogodowa z prognozą 7-dniową i animowanymi ikonami pogody.</p>
+                                <div class="project-tags">
+                                    <span class="badge">JavaScript</span>
+                                    <span class="badge">API</span>
+                                    <span class="badge">CSS3</span>
+                                </div>
+                                <div class="project-cta">
+                                    <a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Zobacz projekt WeatherNow">Zobacz projekt <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card project-card project-taskboard h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <picture>
+                                <source srcset="img/taskboard.webp" type="image/webp">
+                                <img src="img/taskboard.png" class="card-img-top" alt="Zrzut ekranu panelu TaskBoard" loading="lazy">
+                            </picture>
+                            <div class="card-body">
+                                <h3 class="card-title h5">TaskBoard</h3>
+                                <p class="card-text">System zarządzania projektami w stylu Kanban z drag & drop i współpracą zespołową.</p>
+                                <div class="project-tags">
+                                    <span class="badge">Vue.js</span>
+                                    <span class="badge">Python</span>
+                                    <span class="badge">PostgreSQL</span>
+                                </div>
+                                <div class="project-cta">
+                                    <a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Zobacz projekt TaskBoard">Zobacz projekt <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card project-card project-devblog h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <picture>
+                                <source srcset="img/devblog.webp" type="image/webp">
+                                <img src="img/devblog.png" class="card-img-top" alt="Zrzut ekranu bloga DevBlog" loading="lazy">
+                            </picture>
+                            <div class="card-body">
+                                <h3 class="card-title h5">DevBlog</h3>
+                                <p class="card-text">Platforma blogowa z edytorem Markdown, systemem tagów i ciemnym motywem.</p>
+                                <div class="project-tags">
+                                    <span class="badge">Next.js</span>
+                                    <span class="badge">Tailwind</span>
+                                    <span class="badge">MDX</span>
+                                </div>
+                                <div class="project-cta">
+                                    <a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Zobacz projekt DevBlog">Zobacz projekt <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card project-card project-chatspace h-100 spotlight-card reveal" data-reveal data-spotlight>
+                            <picture>
+                                <source srcset="img/chatspace.webp" type="image/webp">
+                                <img src="img/chatspace.png" class="card-img-top" alt="Zrzut ekranu komunikatora ChatSpace" loading="lazy">
+                            </picture>
+                            <div class="card-body">
+                                <h3 class="card-title h5">ChatSpace</h3>
+                                <p class="card-text">Komunikator w czasie rzeczywistym z pokojami, wiadomościami głosowymi i reakcjami emoji.</p>
+                                <div class="project-tags">
+                                    <span class="badge">Socket.io</span>
+                                    <span class="badge">Express</span>
+                                    <span class="badge">Redis</span>
+                                </div>
+                                <div class="project-cta">
+                                    <a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Zobacz projekt ChatSpace">Zobacz projekt <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usługi -->
+        <section id="services" class="section-padding section-shell">
+            <div class="container">
+                <div class="text-center mb-5 reveal" data-reveal>
+                    <p class="section-kicker">Oferta</p>
+                    <h2 class="section-title">Usługi</h2>
+                    <p class="section-subtitle">Co możemy dla Ciebie zrobić</p>
+                </div>
+                <div class="services-panel spotlight-card reveal" data-reveal data-spotlight>
+                    <nav class="services-menu" aria-label="Kategorie usług">
+                        <ul role="tablist" aria-orientation="vertical">
+                            <li data-service="websites">
+                                <button type="button" id="service-tab-websites" role="tab" aria-selected="false" aria-controls="services-detail-panel" tabindex="-1">
+                                    <span><i class="bi bi-globe"></i> Strony internetowe</span>
+                                    <span class="services-indicator"><i class="bi bi-chevron-right"></i></span>
+                                </button>
+                            </li>
+                            <li data-service="mobile" class="active">
+                                <button type="button" id="service-tab-mobile" role="tab" aria-selected="true" aria-controls="services-detail-panel" tabindex="0">
+                                    <span><i class="bi bi-phone"></i> Aplikacje mobilne</span>
+                                    <span class="services-indicator"><i class="bi bi-chevron-right"></i></span>
+                                </button>
+                            </li>
+                            <li data-service="backend">
+                                <button type="button" id="service-tab-backend" role="tab" aria-selected="false" aria-controls="services-detail-panel" tabindex="-1">
+                                    <span><i class="bi bi-server"></i> Systemy backend</span>
+                                    <span class="services-indicator"><i class="bi bi-chevron-right"></i></span>
+                                </button>
+                            </li>
+                            <li data-service="design">
+                                <button type="button" id="service-tab-design" role="tab" aria-selected="false" aria-controls="services-detail-panel" tabindex="-1">
+                                    <span><i class="bi bi-palette"></i> UI/UX Design</span>
+                                    <span class="services-indicator"><i class="bi bi-chevron-right"></i></span>
+                                </button>
+                            </li>
+                            <li data-service="consulting">
+                                <button type="button" id="service-tab-consulting" role="tab" aria-selected="false" aria-controls="services-detail-panel" tabindex="-1">
+                                    <span><i class="bi bi-chat-dots"></i> Konsultacje IT</span>
+                                    <span class="services-indicator"><i class="bi bi-chevron-right"></i></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="services-detail" id="services-detail-panel" role="tabpanel" aria-labelledby="service-tab-mobile">
+                        <h4 class="services-detail-title">Aplikacje mobilne</h4>
+                        <p class="services-detail-desc">Tworzymy wydajne i intuicyjne aplikacje mobilne na iOS i Android. Od prototypu po publikację w sklepach — zajmujemy się całym procesem.</p>
+                        <ul class="services-detail-list">
+                            <li>React Native</li>
+                            <li>Flutter</li>
+                            <li>iOS &amp; Android</li>
+                            <li>Publikacja w sklepach</li>
+                        </ul>
+                    </div>
+                </div>
+                <template data-service-template="websites">
+                    <h4>Strony internetowe</h4>
+                    <p>Projektujemy i kodujemy nowoczesne strony internetowe — responsywne, szybkie i zoptymalizowane pod SEO. Od wizytówek po rozbudowane serwisy.</p>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>WordPress &amp; CMS</li>
+                        <li>Strony typu SPA</li>
+                        <li>Optymalizacja SEO</li>
+                    </ul>
+                </template>
+                <template data-service-template="mobile">
+                    <h4>Aplikacje mobilne</h4>
+                    <p>Tworzymy wydajne i intuicyjne aplikacje mobilne na iOS i Android. Od prototypu po publikację w sklepach — zajmujemy się całym procesem.</p>
+                    <ul>
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>iOS &amp; Android</li>
+                        <li>Publikacja w sklepach</li>
+                    </ul>
+                </template>
+                <template data-service-template="backend">
+                    <h4>Systemy backend</h4>
+                    <p>Budujemy skalowalne systemy backendowe, API i mikroserwisy. Dbamy o bezpieczeństwo, wydajność i łatwość utrzymania kodu.</p>
+                    <ul>
+                        <li>Node.js &amp; Express</li>
+                        <li>Python &amp; Django</li>
+                        <li>REST &amp; GraphQL API</li>
+                        <li>Bazy danych SQL i NoSQL</li>
+                    </ul>
+                </template>
+                <template data-service-template="design">
+                    <h4>UI/UX Design</h4>
+                    <p>Projektujemy interfejsy, które użytkownicy pokochają. Tworzymy prototypy, systemy designu i przeprowadzamy testy użyteczności.</p>
+                    <ul>
+                        <li>Figma &amp; Adobe XD</li>
+                        <li>Prototypowanie</li>
+                        <li>Systemy designu</li>
+                        <li>Testy użyteczności</li>
+                    </ul>
+                </template>
+                <template data-service-template="consulting">
+                    <h4>Konsultacje IT</h4>
+                    <p>Doradzamy w zakresie wyboru technologii, architektury systemów i strategii cyfrowej. Pomagamy podejmować trafne decyzje techniczne.</p>
+                    <ul>
+                        <li>Dobór technologii</li>
+                        <li>Audyt kodu</li>
+                        <li>Architektura systemów</li>
+                        <li>Strategia cyfrowa</li>
+                    </ul>
+                </template>
+            </div>
+        </section>
+
+        <!-- Technologie -->
+        <section id="technologies" class="section-padding section-alt section-shell">
+            <div class="container">
+                <div class="text-center mb-5 reveal" data-reveal>
+                    <p class="section-kicker">Stack</p>
+                    <h2 class="section-title">Technologie</h2>
+                    <p class="section-subtitle">Technologie faktycznie użyte w tym projekcie</p>
+                </div>
+                <div class="row g-4 section-grid" data-stagger>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-filetype-html display-4"></i>
+                            <h3 class="h6 mt-3">HTML5</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-95" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-filetype-css display-4"></i>
+                            <h3 class="h6 mt-3">CSS3</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-filetype-js display-4"></i>
+                            <h3 class="h6 mt-3">JavaScript</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-88" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">88%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-braces display-4"></i>
+                            <h3 class="h6 mt-3">Bootstrap 5</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-92" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">92%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-server display-4"></i>
+                            <h3 class="h6 mt-3">Three.js</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-palette display-4"></i>
+                            <h3 class="h6 mt-3">Canvas 2D</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-88" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">88%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-globe display-4"></i>
+                            <h3 class="h6 mt-3">GitHub Pages</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-82" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card text-center spotlight-card reveal" data-reveal data-spotlight>
+                            <i class="bi bi-git display-4"></i>
+                            <h3 class="h6 mt-3">Git</h3>
+                            <span class="tech-status">In use</span>
+                            <div class="progress mt-2">
+                                <div class="progress-bar progress-w-92" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">92%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="contact" class="section-padding section-alt section-shell">
+            <div class="container">
+                <div class="text-center mb-5 reveal" data-reveal>
+                    <p class="section-kicker">Współpraca</p>
+                    <h2 class="section-title">Kontakt</h2>
+                    <p class="section-subtitle">Masz pomysł na projekt? Odezwij się do nas!</p>
+                    <p class="contact-helper">Odpowiadamy zwykle w ciągu 24 godzin roboczych.</p>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6 reveal" data-reveal>
+                        <form class="contact-form spotlight-card" data-spotlight action="#" method="post">
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label">Imię i nazwisko</label>
+                                <input type="text" class="form-control" id="contactName" name="name" placeholder="Jan Kowalski" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label">Adres e-mail</label>
+                                <input type="email" class="form-control" id="contactEmail" name="email" placeholder="jan@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label">Wiadomość</label>
+                                <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Opisz swój pomysł..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-lg w-100 magnetic-btn" data-magnetic>
+                                <i class="bi bi-send"></i> Wyślij wiadomość <span class="btn-arrow"><i class="bi bi-arrow-right"></i></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 reveal" data-reveal>
+                        <div class="contact-info">
+                            <div class="contact-item spotlight-card" data-spotlight>
+                                <i class="bi bi-envelope-at display-6 text-accent"></i>
+                                <div>
+                                    <h3 class="h6">E-mail</h3>
+                                    <p>kontakt@prozal.pl</p>
+                                </div>
+                            </div>
+                            <div class="contact-item spotlight-card" data-spotlight>
+                                <i class="bi bi-geo-alt display-6 text-accent"></i>
+                                <div>
+                                    <h3 class="h6">Lokalizacja</h3>
+                                    <p>Warszawa, Polska</p>
+                                </div>
+                            </div>
+                            <div class="contact-item spotlight-card" data-spotlight>
+                                <i class="bi bi-telephone display-6 text-accent"></i>
+                                <div>
+                                    <h3 class="h6">Telefon</h3>
+                                    <p>+48 123 456 789</p>
+                                </div>
+                            </div>
+                            <div class="social-links mt-4">
+                                <h3 class="h6 mb-3">Znajdź nas</h3>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer text-center">
+        <div class="container">
+            <p>&copy; 2026 ProZal. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/water-bg.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/section-effects.js"></script>
+    <script src="js/site-shell.js"></script>
+    <script src="js/services-panel.js"></script>
+</body>
+</html>
